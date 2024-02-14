@@ -12,10 +12,8 @@ public class Health : MonoBehaviour
 	public event Action<float> ValueChanged;
 	
 
-	private void Awake()
-	{
+	private void Awake() =>
 		_currentValue = MaxHealth;
-	}
 
 	public void TakeDamage(float damage)
 	{

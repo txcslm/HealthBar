@@ -6,10 +6,8 @@ public abstract class HealthView : MonoBehaviour
 
 	protected float MaxHealth => _health.MaxHealth;
 	
-	private void Awake()
-	{
+	private void Awake() =>
 		_health.ValueChanged += UpdateHealth;
-	}
 
 	protected abstract void UpdateHealth(float targetValue);
 }
