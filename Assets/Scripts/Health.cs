@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-	[field: SerializeField] public float MaxHealth { get; private set; }
+	[field: SerializeField] public float MaxValue { get; private set; }
 	
-	private const float MinHealth = 0f;
+	private const float MinValue = 0f;
 	
 	private float _currentValue;
 	
