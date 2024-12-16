@@ -13,13 +13,13 @@ public class Health : MonoBehaviour
 	
 
 	private void Awake() =>
-		_currentValue = MaxHealth;
+		_currentValue = MaxValue;
 
 	public void TakeDamage(float damage)
 	{
 		_currentValue -= damage;
 		
-		_currentValue = Mathf.Clamp(_currentValue, MinHealth, MaxHealth);
+		_currentValue = Mathf.Clamp(_currentValue, MinValue, MaxValue);
 		ValueChanged?.Invoke(_currentValue);
 	}
 
@@ -27,7 +27,7 @@ public class Health : MonoBehaviour
 	{
 		_currentValue += heal;
 		
-		_currentValue = Mathf.Clamp(_currentValue, MinHealth, MaxHealth);
+		_currentValue = Mathf.Clamp(_currentValue, MinValue, MaxValue);
 		ValueChanged?.Invoke(_currentValue);
 	}
 }
